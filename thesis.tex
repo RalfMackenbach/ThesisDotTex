@@ -11,6 +11,11 @@
 \input{src/lemma}
 \input{src/review}
 \input{src/tikz}
+\usepackage[version=3]{mhchem}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 %%%% Graphics paths
 % **********************************************************
@@ -21,20 +26,18 @@
 %\usepackage{showframe}
 \setreviewsoff
 
-%%%% DOCUMENT COLORS  **********************************************************
 % see src/colors to change colors
 
 %%%% DOCUMENT DETAILS **********************************************************
-\author{Name of Author}
-\newcommand{\placeofbirth}{Place of birth}
-\renewcommand{\year}{2022}
-\newcommand{\defensedate}{maandag 30 december 2022}
-\newcommand{\defensetime}{16:00}
-\newcommand{\maintitle}{Awesome thesis title}
-\newcommand{\subtitle}{with an awesome subtitle}
-\newcommand{\isbn}{123-45-678-9012-3}     % 123boldmath-45-678-9012-3
-\newcommand{\printer}{Name of printer || www.printerswebsite.nl}
-\newcommand{\rector}{prof. dr. Rector}
+\author{Ralf Johannes Josephus Mackenbach}
+\newcommand{\placeofbirth}{Eindhoven}
+\renewcommand{\year}{2023}
+\newcommand{\defensedate}{29 November 2023}
+\newcommand{\defensetime}{13:30}
+\newcommand{\maintitle}{Available Energy}
+\newcommand{\subtitle}{A compass for navigating the nonlinear landscape of fusion plasma turbulence}
+\newcommand{\isbn}{TO-BE-ADDED}     % 123boldmath-45-678-9012-3
+\newcommand{\rector}{prof. dr. Silvia Lenaerts}
 % other relevant meta data about the thesis can be found in preface.tex
 
 \makeatletter % generates all the \author stuff
@@ -49,6 +52,7 @@
 
 % Front matter
 \include{0_preface/preface}
+\include{0_preface/foreword}
 \include{1_summary/abstract}
 \include{1_summary/samenvatting}
 \include{1_summary/societal_summary}
@@ -69,42 +73,39 @@
 \thispagestyle{empty}
 \setcounter{page}{1}
 \pagenumbering{arabic}
-\part{Background}\label{part: intro}
+\part{Background}\label{part: background}
 \include{3_chapters/0_introduction/introduction}
+\include{3_chapters/0_introduction/theory}
+
 % *************************************************************
-%%%% first part
+%%%% first part}
 \cleardoublepage
-\part{Second chapter}\label{part: design}
-\include{3_chapters/1_dummy_chapter/dummy}
+\part{Publications}\label{part: publications}
+\include{3_chapters/1_papers/BAD/BAD}
+\includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/BAD/BAD_Manuscript.pdf}
+\include{3_chapters/1_papers/AE-TE/ae-te}
+\includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/AE-TE/AE-TE.pdf}
+\include{3_chapters/1_papers/AE-Miller/ae-miller}
+\includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/AE-Miller/AE-miller.pdf}
+
 
 % *************************************************************
 %%%% second part
 \cleardoublepage
-\part{Third part}\label{part: design}
-\include{3_chapters/1_dummy_chapter/dummy}
+\part{Some observations, conclusions, and outlook}\label{part: closing}
+\include{3_chapters/2_conclusion_outlook/observations}
+\include{3_chapters/2_conclusion_outlook/conclusion_and_outlook}
 
-% *************************************************************
-\part{Closing}\label{part: closing}
-\include{3_chapters/3_conclusions/conclusions}
-
-%%%% APPENDIX ******************************************************************
-\appendix
-\cleardoublepage
-\part{Appendices}
-
-\definecolor{thumbcolor}{gray}{0.4}     % Change the color of the thumb index tags to gray
-\include{4_appendices/appendix}
 
 %%%% BACK MATTER ***************************************************************
 \isstarredchaptertrue           % This state variable is used for creating the thumb index by indicating that the following chapter is not numbered (i.e. \chapter*{})
 \bookmarksetup{startatroot}
 \addtocontents{toc}{\bigskip}%
 \include{5_bibliography/bibliography}
-\include{6_acknowledgement/acknowledgement}
 
-\newpage
-\include{7_publications/publications}
-\include{8_cv/cv}
+% \newpage
+% \include{7_publications/publications}
+% \include{8_cv/cv}
 
 %%%% BACK **********************************************************************
 %\newpage {~}
