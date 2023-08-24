@@ -1,6 +1,6 @@
 %%%% DOCUMENT CLASS ************************************************************
-\documentclass[print,thumbmain]{src/thesis}  % uncomment for writing
-%\documentclass[final]{src/thesis} % uncomment for rendering/final version
+%\documentclass[print,thumbmain]{src/thesis}  % uncomment for writing
+\documentclass[final]{src/thesis} % uncomment for rendering/final version
 
 %%%% PREAMBLE ******************************************************************
 \input{src/colors}
@@ -15,12 +15,14 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{amsmath}
+\usepackage{soul}
+\usepackage{CJKutf8}
+\usepackage{quoting}
 \DeclareMathOperator*{\argmin}{arg\,min}
 
 %%%% Graphics paths
 % **********************************************************
 \graphicspath{{img/}{../../img/}{../../../img/}}
-
 %%%% REVIEWING OF THESIS
 % **********************************************************
 %\usepackage{showframe}
@@ -42,7 +44,9 @@
 
 \makeatletter % generates all the \author stuff
 %%%% MAIN DOCUMENT *************************************************************
-\begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% ***************************************************************************
 \pagenumbering{roman}
 \thispagestyle{empty}
@@ -82,9 +86,7 @@
 \cleardoublepage
 \part{Publications}\label{part: publications}
 \include{3_chapters/1_papers/BAD/BAD}
-\includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/BAD/BAD_Manuscript.pdf}
 \include{3_chapters/1_papers/AE-TE/ae-te}
-\includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/AE-TE/AE-TE.pdf}
 \include{3_chapters/1_papers/AE-Miller/ae-miller}
 \includepdf[pages=-,pagecommand={},width=1.1\textwidth]{3_chapters/1_papers/AE-Miller/AE-miller.pdf}
 
@@ -120,6 +122,8 @@
 % \thispagestyle{empty}
 \includepdf[pages=-]{img/thesis_back.pdf}
 \fi
+
+
 
 \end{document}
 %%%% THAT's ALL FOLKS **********************************************************

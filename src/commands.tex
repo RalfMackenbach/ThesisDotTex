@@ -24,6 +24,15 @@
 \newcommand{\bc}{\begin{center}}
 \newcommand{\ec}{\end{center}}
 \newcommand{\pwr}[1]{\cdot10^{\textrm{#1}}}
+\newcommand*{\myquotingsource}{}
+\newenvironment{myquoting}[1]{%
+  \renewcommand*{\myquotingsource}{#1}
+  \begin{quoting}[font={itshape,raggedleft},leftmargin=0.5\linewidth,rightmargin=2em]%
+}{%
+  \par\medskip
+  \myquotingsource
+  \end{quoting}%
+}
 
 % Symbols and annotations
 %\newcommand{\fB}{\boldsymbol{f}}

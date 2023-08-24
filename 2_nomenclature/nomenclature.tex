@@ -1,6 +1,6 @@
 \newenvironment{Nomen}
     {\vspace*{-3mm}\begin{center}
-    \begin{longtable}{p{.1\textwidth} p{.83\textwidth}}
+    \begin{longtable}{p{.15\textwidth} p{.83\textwidth}}
     }
     {
     \end{longtable}
@@ -17,7 +17,16 @@
 \markboth{Nomenclature}{Nomenclature}
 
 
+
+
+
+
+
+
 %*********************************************************************************%
+
+
+
 \section*{Acronyms}
 
 \begin{Nomen}
@@ -37,16 +46,22 @@
 \section*{Operators and  symbols}
 
 \begin{Nomen}
-\AddSymbol{$(\partial_x f)_{\boldsymbol{y}}$}{The partial of $f$ with respect to $x$, at constant $\boldsymbol{y}$}
-\AddSymbol{$x \in \mathcal{X}$}{The element $x$ is a member of the set $\boldsymbol{X}$}
+\AddSymbol{$\left(\frac{\partial f}{\partial x}\right)_{\boldsymbol{y}}$}{Partial of $f$ with respect to $x$, at constant $\boldsymbol{y}$. Also denoted as $(\partial_x f)_{\boldsymbol{y}}$}
+\AddSymbol{$x \in \mathcal{X}$}{Element $x$ is a member of the set $\boldsymbol{X}$}
 \AddSymbol{$\mathcal{Y} \subseteq \mathcal{X}$}{The set $\mathcal{Y}$ is a subset of the set $\mathcal{X}$}
-\AddSymbol{$\dot{x}$}{The temporal derivative of $x(t)$, i.e. $\dot{x} \equiv \partial_t x$}
+\AddSymbol{$\dot{x}$}{Temporal derivative of $x(t)$, i.e. $\dot{x} \equiv \partial_t x$}
 \AddSymbol{$\boldsymbol{B}$}{The magnetic field}
 \AddSymbol{$\boldsymbol{A}$}{The magnetic potential which satisfies $\nabla \times \boldsymbol{A} = \boldsymbol{B}$}
 \AddSymbol{$B$}{The magnetic field strength, i.e. $B \equiv |\boldsymbol{B}|$}
+\AddSymbol{$\boldsymbol{v}$}{The particle velocity}
+\end{Nomen}
 
+%*********************************************************************************%
+\section*{Often used terms}
 
-
+\begin{Nomen}
+\AddSymbol{Gyroradius}{The radius of the circular motion of a charged particle in a magnetic field}
+\AddSymbol{Omnigeneity}{A property of a magnetic field, in which trapped particles are radially stationary}
 \end{Nomen}
 
 %\thispagestyle{empty}
